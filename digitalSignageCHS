@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Signage</title>
+    <style>
+      html, body {
+        background: black;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        width: 100%;
+      }
+    </style>
+    <script>
+      // update with the desired time to refresh the presentation (in minutes)
+      var refreshMinutes =30;
+      
+      var timer=setInterval(function(){refreshFrame()}, refreshMinutes*60*1000);
+      function refreshFrame()
+      (
+        var iframe = document.getElementById('presentFrame');
+        var iframeURL = iframe.src;
+        iframe.src = iframeURL;
+      )
+    </script>
+</head>
+<body>
+<!-- update the presentation ID with your own presentation -->
+<!-- update the &delayms=with the time to show each slide (in milliseconds) -->
+<iframe id="presentFrame" src="https://docs.google.com/presentation/d/e/2PACX-1vSnrk_6B7kCsvXHTZIB7Rvnv8iJ10Hee_A3e7mBWt8WuRiPrEAC5WS5EOkakWpCh9q_YRotJYfK51K5/pub?start=true&loop=true&delayms=3000"
+frameborder="0" width="100%" height="100" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscree="true"></iframe>
+</body>
+</html>
