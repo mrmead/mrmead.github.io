@@ -15,13 +15,13 @@
       // update with the desired time to refresh the presentation (in minutes)
       var refreshMinutes =1;
       
-      var timer=setInterval(function(){refreshFrame()}, refreshMinutes*60*1000);
-      function refreshFrame()
-      (
-        var iframe = document.getElementById('presentFrame');
-        var iframeURL = iframe.src;
-        iframe.src = iframeURL;
-      )
+      var timer=setInterval(location.reload(true)}, refreshMinutes*60*1000);
+      //function refreshFrame()
+      //(
+      //  var iframe = document.getElementById('presentFrame');
+      //  var iframeURL = iframe.src;
+      //  iframe.src = iframeURL;
+      //)
     </script>
 </head>
 <body>
@@ -29,5 +29,4 @@
 <!-- update the &delayms=with the time to show each slide (in milliseconds) -->
 <iframe id="presentFrame" src="https://docs.google.com/presentation/d/e/2PACX-1vRFP8nVq8HMRI8PCQ8Hj_IgxlRlLFrp9Z0Gs7j6GGd7uD-v3d67lvU4_Hl6OZGR6G8X9V5hRVzzSGL3/embed?start=true&loop=true&delayms=3000"
 frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscree="true"></iframe>
-</body>
 </html>
